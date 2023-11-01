@@ -121,3 +121,5 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 .notes/notes.txt
+.yarn/*
+.pnp.*
