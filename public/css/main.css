@@ -30,6 +30,7 @@
   margin-block-start: 0;
   margin-block-end: 0;
   border: none;
+  list-style-type: none;
 }
 
 button:not(:disabled) {
@@ -142,6 +143,55 @@ a {
 
 .btn:hover {
   opacity: 0.8;
+}
+
+.avatar {
+  background-image: url(/images/avatar.jpg);
+  background-repeat: no-repeat;
+  background-size: 700px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.boy-1 {
+  background-position-x: -45px;
+  background-position-y: -45px;
+}
+
+.boy-2 {
+  background-position-x: -215px;
+  background-position-y: -45px;
+}
+
+.boy-3 {
+  background-position-x: -385px;
+  background-position-y: -45px;
+}
+
+.boy-4 {
+  background-position-x: -555px;
+  background-position-y: -45px;
+}
+
+.girl-1 {
+  background-position-x: -45px;
+  background-position-y: -385px;
+}
+
+.girl-2 {
+  background-position-x: -215px;
+  background-position-y: -385px;
+}
+
+.girl-3 {
+  background-position-x: -385px;
+  background-position-y: -385px;
+}
+
+.girl-4 {
+  background-position-x: -555px;
+  background-position-y: -385px;
 }
 
 /** ERRORS **/

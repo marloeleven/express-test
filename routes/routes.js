@@ -1,15 +1,11 @@
 const router = require("express").Router();
 
-const loginRoutes = require("./login.js")
-const logoutRoutes = require("./logout.js")
-const registerRoutes = require("./register.js")
-const mainRoutes = require("./main.js")
-
 const routes = {
-  "/": mainRoutes,
-  "/login": loginRoutes,
-  "/logout": logoutRoutes,
-  "/register": registerRoutes
+  "/": require("./main.js"),
+  "/api": require("./api.js"),
+  "/login": require("./login.js"),
+  "/logout": require("./logout.js"),
+  "/register": require("./register.js")
 }
 
 Object.entries(routes).forEach(([path, route]) => {

@@ -1,12 +1,12 @@
 textarea {
-  width: 400px;
+  min-width: 400px;
   height: 200px;
   resize: none;
 }
 
 form .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -25,5 +25,61 @@ form .buttons {
 }
 
 form a {
-  color: var(--text-white)
+  color: var(--text-white);
+}
+
+.avatar-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  user-select: none;
+}
+
+.avatar-container .list {
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100px;
+  gap: 25px;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  width: 35px;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.avatar-container .list li {
+  display: inline-block;
+}
+
+@media screen and (min-width: 900px) {
+  form .row {
+    flex-direction: row;
+  }
 }

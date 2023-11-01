@@ -8,7 +8,7 @@
     <form class='content'>
       <div class='row'>
         <section>
-          <h4>Basic Information</h4>
+          <h4 class="text-center">Basic Information</h4>
 
           <div class='input outline'>
             <input
@@ -35,7 +35,7 @@
           <div class='input outline'>
             <input
               type='text'
-              name='first_name'
+              name='last_name'
               placeholder='Last name'
               data-lpignore='true'
             />
@@ -62,7 +62,22 @@
         </section>
 
         <section>
-          <h4>Account Information</h4>
+          <h4 class="text-center">Account Information</h4>
+
+          <div class="avatar-container">
+            <span class="arrow left">&lt;</span>
+            <ul class="list">
+              <li><div class="avatar boy-1"></div></li>
+              <li><div class="avatar boy-2"></div></li>
+              <li><div class="avatar boy-3"></div></li>
+              <li><div class="avatar boy-4"></div></li>
+              <li><div class="avatar girl-1"></div></li>
+              <li><div class="avatar girl-2"></div></li>
+              <li><div class="avatar girl-3"></div></li>
+              <li><div class="avatar girl-4"></div></li>
+            </ul>
+            <span class="arrow right">&gt;</span>
+          </div>
 
           <div class='input outline'>
             <input
@@ -77,7 +92,7 @@
 
           <div class='input outline'>
             <input
-              type='text'
+              type='password'
               name='password'
               placeholder='placeholder'
               data-lpignore='true'
@@ -88,7 +103,7 @@
 
           <div class='input outline'>
             <input
-              type='text'
+              type='password'
               name='verify_password'
               placeholder='placeholder'
               data-lpignore='true'
@@ -96,12 +111,6 @@
             <label>Verify Password *</label>
             <span class='message'></span>
           </div>
-          <input type='password' name='password' placeholder='Password' />
-          <input
-            type='password'
-            name='password'
-            placeholder='Verify Password'
-          />
 
           <div class='buttons'>
             <a href='/login'>Already have an account?</a>

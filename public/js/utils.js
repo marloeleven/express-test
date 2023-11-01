@@ -10,10 +10,21 @@ export function post(url, data) {
 }
 
 
-export function inputError(selector, message) {
-  const el = document.querySelector(selector);
-  el.classList.add('is-invalid');
-  el.nextElementSibling.textContent = message;
+export function setErrorMessage(el, message) {
+  const messageEl = el.closest('.input').querySelector('.message')
+  messageEl.textContent = message;
 }
 
-export default { post }
+export function debounce(fn, delay = 250) {
+  let timeoutId;
+  return function (...args) {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  }
+}
+
+export default {  }

@@ -20,6 +20,7 @@ input {
   top: 14px;
   left: 20px;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .input.outline textarea::placeholder,
