@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import url(./theme.css);
+
+:root {
+  --bg-primary: #252422;
+  --bg-secondary: #403d39;
+  --bg-tertiary: #ccc5b9;
+  --bg-input: #333;
+
+  --text-white: #e5e5e5;
+  --text-danger: #d62828;
+  --text-warning: #f4a261;
+  --text-success: #2a9d8f;
+  --text-info: #023e8a;
+  
+  --text-sm: 1.2rem;
+  --text-md: 1.6rem; 
+  --text-title: 1.4rem;
+  --text-header: 1.8rem;
+}
+
+
+/** RESET **/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  border: none;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+html {
+  font-size: 10px;
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+[data-lastpass-icon-root] {
+  display: none !important;
+}
+
+/** DEFAULT **/
+
+a {
+  color: var(--text-info);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/** CUSTOM **/
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 3rem 4rem 4rem;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.box-shadow {
+  box-shadow: 0 0px 10px rgba(0,0,0,9);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-sm {
+  font-size: 1.2rem;
+}
+
+.text-title {
+  font-size: 1.4rem;
+}
+
+.text-md {
+  font-size: 1.6rem;
+
+}
+
+.text-header {
+  font-size: 1.8rem;
+}
+
+.round {
+  border-radius: 4px;
+}
+
+.btn-primary {
+  --box-shadow: rgba(2, 62, 138, 0.8);
+  background-color: var(--text-info);
+  color: var(--bg-white);
+}
+
+.btn-primary:active {
+  --box-shadow: rgba(2, 62, 138, 0);
+}
+
+.btn-pulse {
+  box-shadow: 0 0 0 0 var(--box-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-pulse:active:not(:disabled) {
+  box-shadow: 0 0 0 20px var(--box-shadow);
+}
+
+.btn {
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/** ERRORS **/
+.text-center {
+  text-align: center;
+}
+
+.text-error {
+  color: var(--text-danger);
+}
+
+.text-success {
+  color: var(--text-success);
+}

@@ -1,40 +1,32 @@
-/**
- * Main application file.
- * 
- * NOTE: This file contains many required packages, but not all of them - you may need to add more!
- */
+const handlebars = require("express-handlebars");
+const cookieParser = require("cookie-parser");
+const bodyParser = require('body-parser');
+const cors = require("cors");
+const path = require("path");
 
-// Setup Express
+const routes = require("./routes/routes.js");
+
 const express = require("express");
 const app = express();
 const port = 3000;
 
-// Setup Handlebars
-const handlebars = require("express-handlebars");
 app.engine("handlebars", handlebars.engine({
     defaultLayout: "main"
 }));
 app.set("view engine", "handlebars");
 
-// Setup body-parser
+
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-// Setup cookie-parser
-const cookieParser = require("cookie-parser");
 app.use(cookieParser());
+app.use(cors());
 
-// Make the "public" folder available statically
-const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 
-// Use the toaster middleware
-app.use(require("./middleware/toaster-middleware.js"));
+app.use("/", routes);
 
-// Setup routes
-app.use(require("./routes/application-routes.js"));
 
-// Start the server running.
 app.listen(port, function () {
     console.log(`The Best App In The World ™️ listening on port ${port}!`);
 });

@@ -1,0 +1,87 @@
+<link rel='stylesheet' href='/css/register.css' />
+
+<section class='container'>
+
+  <div class='login box-shadow content card'>
+    <h1>REGISTER ACCOUNT</h1>
+
+    <form class='content'>
+      <div class='row'>
+        <section>
+          <h4>Basic Information</h4>
+          <div class='input outline'>
+            <input
+              type='text'
+              name='first_name'
+              placeholder='First name'
+              data-lpignore='true'
+            />
+            <label>First Name *</label>
+            <span class='message'></span>
+          </div>
+          <div class='input outline'>
+            <input
+              type='text'
+              name='middle_name'
+              placeholder='Middle name'
+              data-lpignore='true'
+            />
+            <label>Middle Name</label>
+            <span class='message'></span>
+          </div>
+          <div class='input outline'>
+            <input
+              type='text'
+              name='first_name'
+              placeholder='Last name'
+              data-lpignore='true'
+            />
+            <label>Last Name *</label>
+            <span class='message'></span>
+          </div>
+          <div class='input outline'>
+            <input
+              type='date'
+              name='birth_date'
+              placeholder='First name'
+              data-lpignore='true'
+            />
+            <label>Birth Date</label>
+            <span class='message'></span>
+          </div>
+          <div class='input outline'>
+            <textarea name='description' placeholder='Description'></textarea>
+            <label>Description</label>
+            <span class='message'></span>
+          </div>
+        </section>
+
+        <section>
+          <h4>Account Information</h4>
+
+          <input type='text' name='username' placeholder='Username' />
+          <input type='password' name='password' placeholder='Password' />
+          <input
+            type='password'
+            name='password'
+            placeholder='Verify Password'
+          />
+
+          <div class='buttons'>
+            <a href='/login'>Already have an account?</a>
+            <br />
+            <button
+              type='submit'
+              class='btn btn-primary btn-pulse text-md round'
+            >Register</button>
+          </div>
+
+        </section>
+
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<script src='/js/register.js' type='module'></script>

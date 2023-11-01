@@ -1,0 +1,44 @@
+textarea,
+input {
+  width: 100%;
+  background: var(--bg-input);
+  border: none;
+  outline: none;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  color: var(--text-white);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.input.outline {
+  position: relative;
+}
+
+.input.outline label {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  transition: all 0.3s ease;
+}
+
+.input.outline textarea::placeholder,
+.input.outline input::placeholder {
+  color: transparent;
+}
+
+.input.outline .message {
+  font-size: var(--text-sm);
+  margin-top: 0.5rem;
+  color: var(--text-danger);
+}
+
+.input.outline:has(textarea:not(:placeholder-shown)) label,
+.input.outline:has(input:not(:placeholder-shown)) label,
+.input.outline:focus-within label {
+  transform: translateY(-25px) translateX(-20px);
+  font-size: 1.2rem;
+  background-color: var(--bg-input);
+  padding: 2px 5px;
+  border-radius: 4px;
+}

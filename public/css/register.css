@@ -1,0 +1,29 @@
+textarea {
+  width: 400px;
+  height: 200px;
+  resize: none;
+}
+
+form .row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+form section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 350px;
+}
+
+form .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: right;
+}
+
+form a {
+  color: var(--text-white)
+}
