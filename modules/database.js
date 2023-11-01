@@ -41,7 +41,6 @@ function set(query, args) {
       stmt.run(...args, (err, row) => {
         if (err) {
           stmt.finalize();
-          console.log('err', err);
           reject(err);
           return;
         }
